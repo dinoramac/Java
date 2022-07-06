@@ -32,8 +32,8 @@ public class CiklicnaTablica {
 
 		while (true) {
 			try {
-				brojRedova = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj redova"));
 				brojStupaca = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj stupaca"));
+				brojRedova = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj redova"));
 				break;
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(null, "Neispravan unos");
@@ -47,38 +47,46 @@ public class CiklicnaTablica {
 
 	static int[][] popunjavanjeTablice(int[][] tablica) {
 
-		int brojRedova = tablica.length;
-		int brojStupaca = tablica[0].length;
+		int brojRedova = tablica.length - 1;
+		int brojStupaca = tablica[0].length - 1;
 
 		int broj = 1;
 		int stupac = 0;
 		int red = 0;
 
 		while (red < brojRedova && stupac < brojStupaca) {
-			if (stupac < brojStupaca) {
-				for (int i = brojStupaca - 1; i >= stupac; i--) {
-					tablica[brojRedova - 1][i] = broj++;
-				}
-				brojRedova--;
-			}
 
-			for (int i = brojRedova - 1; i >= red; i--) {
+			for (int i = brojStupaca; i >= stupac; i--) {
+				tablica[brojRedova][i] = broj++;
+			}
+			brojRedova--;
+
+			for (int i = brojRedova; i >= red; i--) {
 				tablica[i][stupac] = broj++;
 			}
-
 			stupac++;
 
-			for (int i = stupac; i < brojStupaca; i++) {
+			for (int i = stupac; i <= brojStupaca; i++) {
 				tablica[red][i] = broj++;
 			}
-
 			red++;
 
-			if (red < brojRedova) {
-				for (int i = red; i < brojRedova; i++) {
-					tablica[i][brojStupaca - 1] = broj++;
-				}
-				brojStupaca--;
+			for (int i = red; i <= brojRedova; i++) {
+				tablica[i][brojStupaca] = broj++;
+			}
+			brojStupaca--;
+
+		}
+
+		if (stupac < brojStupaca && red >= brojRedova && (tablica.length) % 2 != 0) {
+			for (int i = brojStupaca; i >= stupac; i--) {
+				tablica[brojRedova][i] = broj++;
+			}
+		}
+
+		if (red < brojRedova && stupac >= brojStupaca && (tablica[0].length) % 2 != 0) {
+			for (int i = brojRedova; i >= red; i--) {
+				tablica[i][stupac] = broj++;
 			}
 		}
 
