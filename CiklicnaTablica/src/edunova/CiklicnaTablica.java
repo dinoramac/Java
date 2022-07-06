@@ -89,6 +89,10 @@ public class CiklicnaTablica {
 				tablica[i][stupac] = broj++;
 			}
 		}
+		
+		if (stupac >= brojStupaca && (tablica.length) == tablica[0].length) {
+				tablica[brojRedova][brojStupaca] = broj++;
+		}
 
 		return tablica;
 
