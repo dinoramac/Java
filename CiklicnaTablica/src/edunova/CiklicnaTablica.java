@@ -14,14 +14,9 @@ public class CiklicnaTablica {
 
 		for (int i = 0; i < tablica.length; i++) {
 			for (int j = 0; j < tablica[0].length; j++) {
-				if (tablica[i][j] < 10) {
-					System.out.print("  ");
-				} else if (tablica[i][j] >= 10 && tablica[i][j] < 100) {
-					System.out.print(" ");
-				}
-				System.out.print(tablica[i][j] + " ");
+				System.out.printf("%4d", tablica[i][j]);
 			}
-			System.out.print("\n");
+			System.out.println();
 		}
 	}
 
@@ -82,16 +77,12 @@ public class CiklicnaTablica {
 			for (int i = brojStupaca; i >= stupac; i--) {
 				tablica[brojRedova][i] = broj++;
 			}
-		}
-
-		if (red < brojRedova && stupac >= brojStupaca && (tablica[0].length) % 2 != 0) {
+		} else if (red < brojRedova && stupac >= brojStupaca && (tablica[0].length) % 2 != 0) {
 			for (int i = brojRedova; i >= red; i--) {
 				tablica[i][stupac] = broj++;
 			}
-		}
-		
-		if (stupac >= brojStupaca && (tablica.length) == tablica[0].length) {
-				tablica[brojRedova][brojStupaca] = broj++;
+		} else if ((tablica.length) % 2 != 0 && (tablica.length) == tablica[0].length) {
+			tablica[brojRedova][brojStupaca] = broj++;
 		}
 
 		return tablica;
