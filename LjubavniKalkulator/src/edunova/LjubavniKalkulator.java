@@ -25,31 +25,24 @@ public class LjubavniKalkulator {
 		
 		return rekurzija(iduciNiz.toString());
 	}
+	
+	public static String ucitajString(String poruka) {
+		String s;
+		while(true) {
+			s = JOptionPane.showInputDialog(poruka);
+			if(s.trim().isEmpty()) {
+				JOptionPane.showMessageDialog(null, 
+						"Obavezan unos");
+				continue;
+			}
+			return s;
+		}
+	}
 
 	public LjubavniKalkulator() {
 
-		String ime1 = new String();
-		String ime2 = new String();
-		
-		while(true) {
-			ime1 = JOptionPane.showInputDialog("Unesi prvo ime");
-			if(ime1.trim().isEmpty()) {
-				JOptionPane.showMessageDialog(null, 
-						"Obavezan unos");
-				continue;
-			}
-			break;
-		}
-		
-		while(true) {
-			ime2 = JOptionPane.showInputDialog("Unesi drugo ime");
-			if(ime2.trim().isEmpty()) {
-				JOptionPane.showMessageDialog(null, 
-						"Obavezan unos");
-				continue;
-			}
-			break;
-		}
+		String ime1 = ucitajString("Unesi prvo ime");
+		String ime2 = ucitajString("Unesi drugo ime");
 		
 		System.out.println(ime1 + " " + ime2);
 		
