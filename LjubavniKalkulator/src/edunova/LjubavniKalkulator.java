@@ -41,11 +41,10 @@ public class LjubavniKalkulator {
 
 	public LjubavniKalkulator() {
 
-		String ime1 = ucitajString("Unesi prvo ime");
-		String ime2 = ucitajString("Unesi drugo ime");
+		String ime1 = ucitajString("Unesi prvo ime:");
+		String ime2 = ucitajString("Unesi drugo ime:");
 		
 		System.out.println(ime1 + " " + ime2);
-		
 		
 		int brojac = 0;
 
