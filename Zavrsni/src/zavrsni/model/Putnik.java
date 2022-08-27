@@ -7,6 +7,8 @@ public class Putnik extends Entitet{
 	private String email;
 	private String datumRodjenja;
 	
+	
+	
 	public String getIme() {
 		return ime;
 	}

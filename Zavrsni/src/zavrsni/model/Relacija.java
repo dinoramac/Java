@@ -11,6 +11,8 @@ public class Relacija extends Entitet{
 	private Vozac vozac;
 	private Autobus autobus;
 	
+	
+	
 	public Date getVrijemePolaska() {
 		return vrijemePolaska;
 	}

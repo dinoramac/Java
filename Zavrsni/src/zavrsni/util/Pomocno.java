@@ -34,13 +34,13 @@ public class Pomocno {
 	public static int ucitajInt(String poruka, int min, int max) {
 		int i = ucitajInt(poruka);
 		while (true) {
-			System.out.print(poruka + ": ");
 			try {
 				if (i >= min && i <= max) {
 					return i;
 				}
 			} catch (Exception e) {
 				System.out.println("Niste unjeli broj između" + min + "-" + max);
+				i=ucitajInt(poruka);
 			}
 		}
 	}

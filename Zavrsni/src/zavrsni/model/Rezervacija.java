@@ -2,11 +2,13 @@ package zavrsni.model;
 
 import java.util.Date;
 
-public class Rezervacija {
+public class Rezervacija extends Entitet{
 
 	private Date datumRezervacije;
 	private Relacija Relacija;
 	private Putnik putnik;
+	
+	
 	
 	public Date getDatumRezervacije() {
 		return datumRezervacije;

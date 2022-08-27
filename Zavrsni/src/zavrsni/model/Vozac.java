@@ -6,6 +6,8 @@ public class Vozac extends Entitet{
 	private String prezime;
 	private String oib;
 	
+	
+	
 	public String getIme() {
 		return ime;
 	}

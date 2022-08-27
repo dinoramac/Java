@@ -6,6 +6,8 @@ public class Autobus extends Entitet{
 	private int brojSjedala;
 	private String stanjeAutobusa;
 	
+	
+	
 	public String getBrojAutobusa() {
 		return brojAutobusa;
 	}
