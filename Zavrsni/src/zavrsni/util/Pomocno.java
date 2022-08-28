@@ -19,6 +19,20 @@ public class Pomocno {
 			return s;
 		}
 	}
+	
+	public static String ucitajStringStajalista(String poruka) {
+		String s;
+		while (true) {
+			System.out.print(poruka);
+			s = ulaz.nextLine();
+			if (s.trim().isEmpty()) {
+				System.out.println("Obavezan unos");
+				continue;
+			}
+
+			return s;
+		}
+	}
 
 	public static int ucitajInt(String poruka) {
 		while (true) {

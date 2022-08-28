@@ -4,9 +4,13 @@ public class E01Varijable {
 
 	public static void main(String[] args) {
 
-		int i;
+		int i, j;
 
 		i = 7;
+		
+		System.out.println(i);
+		
+		j = i<10 ? 1 : 2;
 
 		System.out.println(i);
 
