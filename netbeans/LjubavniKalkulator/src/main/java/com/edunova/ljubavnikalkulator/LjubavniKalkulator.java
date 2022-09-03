@@ -133,15 +133,14 @@ public class LjubavniKalkulator extends javax.swing.JFrame {
         ispis.append(brojevi.toString());
         ispis.append("\n");
 	rekurzija(brojevi.toString(), ispis);
-        
+        txtaRezultat.setText(ispis.toString());
         
     }//GEN-LAST:event_btnIzracunajActionPerformed
 
-    public int rekurzija(String niz, StringBuilder ispis) {
+    public static int rekurzija(String niz, StringBuilder ispis) {
         
         if(niz.length()<=2) {
-            txtaRezultat.setText(ispis.toString());
-            return Integer.parseInt(niz);
+            return 0;
         }
 
         StringBuilder iduciNiz = new StringBuilder();
