@@ -127,7 +127,7 @@ public class LjubavniKalkulator extends javax.swing.JFrame {
 				}
 			}
 			brojevi.append(brojac);
-		}
+        }
         ispis.append(brojevi.toString());
         ispis.append("\n");
         txtaRezultat.setText(rekurzija(brojevi.toString(), ispis));
