@@ -2,14 +2,25 @@ package zavrsni.model;
 
 public class Entitet {
 
-	private String sifra;
+	private Integer sifra;
 
-	public String getSifra() {
+	public Entitet() {
+		super();
+	}
+
+	public Entitet(Integer sifra) {
+		super();
+		this.sifra = sifra;
+	}
+
+	public Integer getSifra() {
 		return sifra;
 	}
 
-	public void setSifra(String sifra) {
+	public void setSifra(Integer sifra) {
 		this.sifra = sifra;
 	}
+	
+	
 	
 }

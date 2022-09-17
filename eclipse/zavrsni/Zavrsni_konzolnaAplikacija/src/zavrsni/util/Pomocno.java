@@ -1,5 +1,6 @@
 package zavrsni.util;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -55,6 +56,18 @@ public class Pomocno {
 			} catch (Exception e) {
 				System.out.println("Niste unjeli broj između" + min + "-" + max);
 				i=ucitajInt(poruka);
+			}
+		}
+	}
+	
+	public static Date ucitajDatum(String poruka) {
+
+		while (true) {
+			System.out.print(poruka);
+			try {
+				return  DatumVrijemeUtil.getSimpleDateFormat().parse(ulaz.nextLine());
+			} catch (Exception e) {
+				System.out.println("Neispravan format datuma. Primjer unosa: " + DatumVrijemeUtil.getSimpleDateFormat().format(new Date()));
 			}
 		}
 	}
