@@ -65,9 +65,9 @@ public class Pomocno {
 		while (true) {
 			System.out.print(poruka);
 			try {
-				return  DatumVrijemeUtil.getSimpleDateFormat().parse(ulaz.nextLine());
+				return  DatumUtil.getSimpleDateFormat().parse(ulaz.nextLine());
 			} catch (Exception e) {
-				System.out.println("Neispravan format datuma. Primjer unosa: " + DatumVrijemeUtil.getSimpleDateFormat().format(new Date()));
+				System.out.println("Neispravan format datuma. Primjer unosa: " + DatumUtil.getSimpleDateFormat().format(new Date()));
 			}
 		}
 	}

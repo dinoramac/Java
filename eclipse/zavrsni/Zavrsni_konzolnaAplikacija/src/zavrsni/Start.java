@@ -9,7 +9,7 @@ import java.util.Scanner;
 import zavrsni.model.Autobus;
 import zavrsni.model.Relacija;
 import zavrsni.model.Vozac;
-import zavrsni.util.DatumVrijemeUtil;
+import zavrsni.util.DatumUtil;
 import zavrsni.util.Pomocno;
 import zavrsni.util.RelacijaCRUD;
 
@@ -26,8 +26,7 @@ public class Start {
 		autobusi = new ArrayList<>();
 		
 		Pomocno.ulaz= new Scanner(System.in);
-		DatumVrijemeUtil.setSimpleDateFormat(new SimpleDateFormat(DatumVrijemeUtil.getFormatZaDatum()));
-		DatumVrijemeUtil.setSimpleDateFormat(new SimpleDateFormat(DatumVrijemeUtil.getFormatZaVrijeme()));
+		DatumUtil.setSimpleDateFormat(new SimpleDateFormat(DatumUtil.getFormatZaDatum()));
 		
 		inicijalniPodatci();
 		
@@ -98,7 +97,7 @@ public class Start {
 	}
 	
 	private void vozniRedProgram() {
-//		RelacijaCRUD.ispis(relacije);
+		RelacijaCRUD.ispis(relacije);
 //		System.out.println("");
 //		 = Pomocno.ucitajStringStajalista("Pocetno Stajaliste ");
 //		zavrsnoStajaliste = Pomocno.ucitajStringStajalista("Zavrsno Stajaliste ");
