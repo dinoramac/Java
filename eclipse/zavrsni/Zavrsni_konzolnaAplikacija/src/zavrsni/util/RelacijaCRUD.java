@@ -13,7 +13,7 @@ public class RelacijaCRUD {
 		System.out.println("Lista relacija: ");
 		for (Relacija r : relacije) {
 				System.out.println(rb++ + ". " + r.getPocetnoStajaliste() + " " + r.getZavrsnoStajaliste() + " " +
-						"Vrijeme vožnje: ");
+						"\n\tVrijeme vožnje: ");
 		}
 		System.out.println("----------");
 	}

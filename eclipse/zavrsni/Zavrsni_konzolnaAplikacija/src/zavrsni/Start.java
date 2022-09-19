@@ -46,12 +46,12 @@ public class Start {
 		vozaci.add(new Vozac(3,"Đuro","Đurić","01234567893"));
 		
 		autobusi.add(new Autobus(1,"0123",50,true));
-		autobusi.add(new Autobus(2,"0123",50,false));
-		autobusi.add(new Autobus(3,"0123",50,true));
+		autobusi.add(new Autobus(2,"0124",51,false));
+		autobusi.add(new Autobus(3,"0125",52,true));
 		
 		relacije.add(new Relacija(1,"Osijek","Zagreb",new Date(),240,vozaci.get(0),autobusi.get(0)));
-		relacije.add(new Relacija(1,"Osijek","Đakovo",new Date(),40,vozaci.get(1),autobusi.get(1)));
-		relacije.add(new Relacija(1,"Osijek","Rijeka",new Date(),480,vozaci.get(2),autobusi.get(2)));
+		relacije.add(new Relacija(2,"Osijek","Đakovo",new Date(),40,vozaci.get(1),autobusi.get(1)));
+		relacije.add(new Relacija(3,"Osijek","Rijeka",new Date(),480,vozaci.get(2),autobusi.get(2)));
 		
 		
 		
