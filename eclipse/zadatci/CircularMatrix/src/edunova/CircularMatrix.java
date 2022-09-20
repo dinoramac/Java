@@ -7,7 +7,6 @@ public class CircularMatrix {
 	public CircularMatrix() {
 
 		circularMatrix();
-		//primjer();
 
 	}
 
@@ -67,50 +66,6 @@ public class CircularMatrix {
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[0].length; j++) {
 				System.out.printf("%4d ",matrix[i][j]);
-			}
-			System.out.println("");
-		}
-
-	}
-
-	private void primjer() {
-
-		int[][] matrix = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 },{ 0, 0, 0 } };
-
-		int top = 0;
-		int bottom = matrix.length - 1;
-		int left = 0;
-		int right = matrix[0].length - 1;
-
-		int dir = 1;
-		int counter = 1;
-
-		while (top <= bottom && left <= right) {
-			
-			for (int i = left; i <= right; i++) {
-				matrix[top][i] = counter++;
-			}
-			top++;
-			
-			for (int i = top; i <= bottom; i++) {
-				matrix[i][right] = counter++;
-			}
-			right--;
-			
-			for (int i = right; i >= left; i--) {
-				matrix[bottom][i] = counter++;
-			}
-			bottom--;
-			
-			for (int i = bottom; i >= top; i--) {
-				matrix[i][left] = counter++;
-			}
-			left++;
-		}
-
-		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[0].length; j++) {
-				System.out.print(matrix[i][j] + " ");
 			}
 			System.out.println("");
 		}
